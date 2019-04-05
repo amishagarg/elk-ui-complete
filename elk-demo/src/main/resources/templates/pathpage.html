@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/pathpage-style.css" th:src="@{/css/pathpage-style.css}">
+    <script type="text/javascript" src="../static/js/dynamic-button.js" th:src="@{/js/dynamic-button.js}"></script>
+</head>
+
+<body style="height:100%;">
+    <nav class="navbar  navbar-dark bg-dark" style="margin-bottom: 150px">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <!-- <ul class="nav navbar-right">
+                    <li><a href="#"> <img class="border" src="" style="width:35px;height:35px;border-radius:50px"> </a></li>
+                </ul> -->
+        </div>
+    </nav>
+
+    <div class="container row " style="margin: auto;">
+        <div class="col-xs-12 col-sm-12 col-md-6" style="margin: 0px auto 50px auto;">
+            <div class="card border rounded">
+                <div class="card-header">
+                    <h4> Upload File </h4>
+                </div>
+                <div class="card-body ">
+                    Give directory path to upload all the files in the folder.
+					<div class="form-group">
+						<form action="/upload" method="post">
+							<br>
+							<input type="button" ID="btnPost" class="form-control btn-primary"
+								onclick="AddTextBox()" value="Add File Path ">
+							<br>
+							<div id="TextBoxContainer" class="form-inline text-center">
+								<!--Textboxes will be added here -->
+							</div>
+							<br> <input type="submit" ID="subBtn" class="form-control btn-primary">
+								
+					</form>
+					</div>
+
+				</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

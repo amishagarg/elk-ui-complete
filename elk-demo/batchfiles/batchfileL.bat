@@ -1,0 +1,1 @@
+start D:\Software\L\bin\logstash.bat -f D:\Software\L\bin\logstash.conf

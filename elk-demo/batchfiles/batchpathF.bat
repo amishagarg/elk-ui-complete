@@ -1,0 +1,1 @@
+start D:\Software\F\filebeat.exe -c D:\Software\F\pathfilebeat.yml -e -d "*"

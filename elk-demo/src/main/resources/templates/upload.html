@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar  navbar-dark bg-dark" style="margin-bottom: 150px">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">ELK Manager</a>
+            </div>
+            <!-- <ul class="nav navbar-right">
+                    <li><a href="#"> <img class="border" src="" style="width:35px;height:35px;border-radius:50px"> </a></li>
+                </ul> -->
+
+        </div>
+    </nav>
+    <div class="container">
+        <div class="container row ">
+            <div class="col-xs-12 col-sm-5 col-md-4">
+                <div class="card border rounded h-100 " style="margin-bottom: 20px">
+
+                    <div class="card-header">
+                        <h4> Upload a Log File </h4>
+                    </div>
+                    <div class="card-body h-80 ">
+                        <h3>Browse for the requried log file </h3>
+                        <form method="POST" action="/browse" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="exampleFormControlFile1">Example sql_log.log</label>
+                                <br>
+                                <input type="file" class="form-control-file" name="file">
+                                <br>
+                                <input type="submit" value="Go" class="btn btn-primary form-control" style="margin-bottom : 10px">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-4">
+                <div class="card border rounded h-100" style="margin-bottom: 20px ">
+                    <div class="card-header">
+                        <h4> Log Path </h4>
+                    </div>
+                    <div class="card-body h-80 ">
+                        <form action = "/pathpage" method = "get">
+                            <h3>Give path location of logs </h3>
+                            
+                            <label for="exampleFormControlFile1">Example: D:/Software/F</label>
+                            <label for="exampleFormControlFile1">Files from the path get pushed to elasticsearch automatically</label>
+                          
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-primary form-control" value="Go" style="margin-bottom : 10px">
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-4" >
+                <div class="card border rounded h-100" style="margin-bottom: 20px">
+                    <div class="card-header">
+                        <h4>Database </h4>
+                    </div>
+                    <div class="card-body h-80 ">
+                        <h3>Read from the Database </h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleFormControlFile1">Data pushed to elasticsearch automatically</label>
+                                <label for="exampleFormControlFile1">Just press the button and you're good to go!</label>
+                                
+                                <input type="button" value="Go" class="btn btn-primary form-control" style="margin-bottom : 10px">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<!-- 
+method="POST" action="/upload" enctype="multipart/form-data"> -->
